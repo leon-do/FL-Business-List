@@ -1,0 +1,1 @@
+/Inquiry/CorporationSearch/SearchResults?InquiryType=EntityName&inquiryDirectionType=ForwardList&searchNameOrder=02XYPLUS%20P970000012350&SearchTerm=*&entityId=P97000001235&listNameOrder=02DIAGNOSTIC%20P020000277040

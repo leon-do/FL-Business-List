@@ -22,8 +22,8 @@ function add2csv(){
 			var companyName = $(this).children(0).eq(0).text()
 			var companyStatus = $(this).children(0).eq(2).text()
 			var companyUrl = 'http://search.sunbiz.org/' + $(this).children(0).children(0).eq(0).attr('href')
-			if (companyName !== " " && companyStatus !== "INACT" || companyStatus !== "INACT/UA"){
-				companyArray.push('\n"' + companyName + '"', '"' + companyStatus + '"', '"' + companyUrl + '"')
+			if (companyStatus == "Active"){
+				companyArray.push('\n"' + companyName + '"', '"' + companyUrl + '"')
 			}
 		});
 
