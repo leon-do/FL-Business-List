@@ -21,11 +21,14 @@ function add2csv(){
 		$('tr').each(function(){
 			var companyName = $(this).children(0).eq(0).text()
 			var companyStatus = $(this).children(0).eq(2).text()
+			var currentUrl = $(this).title()
+			console.log(currentUrl)
 			var companyUrl = 'http://search.sunbiz.org/' + $(this).children(0).children(0).eq(0).attr('href')
 			if (companyStatus == "Active"){
 				companyArray.push('\n"' + companyName + '"', '"' + companyUrl + '"')
 			} else if (companyStatus == undefined){
-				go2Url(companyUrl)
+				nightmare.refresh()
+				add2csv()
 			}
 		});
 
