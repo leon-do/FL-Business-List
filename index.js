@@ -24,6 +24,8 @@ function add2csv(){
 			var companyUrl = 'http://search.sunbiz.org/' + $(this).children(0).children(0).eq(0).attr('href')
 			if (companyStatus == "Active"){
 				companyArray.push('\n"' + companyName + '"', '"' + companyUrl + '"')
+			} else if (companyStatus == undefined){
+				go2Url(companyUrl)
 			}
 		});
 
